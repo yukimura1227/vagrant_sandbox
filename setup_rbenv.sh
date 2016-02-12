@@ -9,6 +9,9 @@ sudo yum -y install gcc
 echo "install openssl-devel..."
 sudo yum -y install openssl-devel
 
+echo "instal readline-devel..."
+yum install -y readline-devel
+
 # TODO chcke git installed. and install git if git not installed
 #echo "install git..."
 #sudo yum -y install git
