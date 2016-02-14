@@ -12,9 +12,11 @@ sudo yum -y install openssl-devel
 echo "instal readline-devel..."
 yum install -y readline-devel
 
-# TODO chcke git installed. and install git if git not installed
-#echo "install git..."
-#sudo yum -y install git
+which git
+if [ $? -ne 0 ]
+  echo "install git..."
+  sudo yum -y install git
+fi
 
 echo "download rbenv..."
 git clone https://github.com/sstephenson/rbenv.git ${RBENV_INSTALL_DEST_DIR}
