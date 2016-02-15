@@ -36,7 +36,7 @@ git clone https://github.com/sstephenson/ruby-build.git ${RBENV_INSTALL_DEST_DIR
 
 # install ruby
 echo "ruby install..."
-TARGET_RUBY_VERSION="2.1.2"
+TARGET_RUBY_VERSION="2.3.0"
 rbenv install -v ${TARGET_RUBY_VERSION}
 
 rbenv global ${TARGET_RUBY_VERSION}
