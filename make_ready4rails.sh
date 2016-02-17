@@ -12,6 +12,6 @@ echo "installing gcc-c++..."
 sudo yum install gcc-c++ -y
 
 echo "${GEM_PATH} install rails..."
-${GEM_PATH} install --no-document rails -v '4.1.1'
+${GEM_PATH} install --no-document rails -v '4.2.5.1'
 
 
