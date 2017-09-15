@@ -14,6 +14,7 @@ yum install -y readline-devel
 
 which git
 if [ $? -ne 0 ]
+then
   echo "install git..."
   sudo yum -y install git
 fi
