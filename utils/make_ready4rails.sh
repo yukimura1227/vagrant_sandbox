@@ -18,5 +18,5 @@ mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
 sudo yum -y install fontconfig-devel
 
 echo "${GEM_PATH} install rails..."
-su - vagrant -c "${GEM_PATH} install --no-document rails -v '5.1.3'"
+su - vagrant -c "${GEM_PATH} install --no-document rails -v '5.1.3' --without production"
 
