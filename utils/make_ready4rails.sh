@@ -12,5 +12,5 @@ echo "installing gcc-c++..."
 sudo yum install gcc-c++ -y
 
 echo "${GEM_PATH} install rails..."
-su - vagrant -c "${GEM_PATH} install --no-document rails -v '5.1.3'"
+su - vagrant -c "${GEM_PATH} install --no-document rails -v '5.1.4'"
 
