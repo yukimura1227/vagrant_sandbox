@@ -5,7 +5,7 @@ Vagrant.configure('2') do |config|
   config.vm.define :rails_sandbox do |node|
     node.vm.box = 'centos64_6_8'
     node.vm.box_url = 'http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.8_chef-provisionerless.box'
-    node.vm.network 'private_network', ip: '192.168.55.30'
+    node.vm.network 'private_network', ip: '192.168.55.30', guest: 8080, host:8080
     node.vm.provision :shell, path: '../utils/setup_postgress.sh'
     node.vm.provision :shell, path: '../utils/setup_rbenv.sh'
     node.vm.provision :shell, path: '../utils/make_ready4rails.sh'
