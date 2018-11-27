@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $# -ne 1 ]; then
+  TARGET_RUBY_VERSION="2.4.2"
+else
+  TARGET_RUBY_VERSION=$1
+fi
+
 RBENV_INSTALL_DEST_DIR=/usr/local/rbenv
 COMMON_BASH_SETTING_FILE=/etc/profile
 
@@ -37,7 +43,6 @@ git clone https://github.com/sstephenson/ruby-build.git ${RBENV_INSTALL_DEST_DIR
 
 # install ruby
 echo "ruby install..."
-TARGET_RUBY_VERSION="2.4.2"
 rbenv install -v ${TARGET_RUBY_VERSION}
 
 rbenv global ${TARGET_RUBY_VERSION}
