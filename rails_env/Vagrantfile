@@ -13,6 +13,7 @@ Vagrant.configure('2') do |config|
     node.vm.provision :shell, path: '../utils/setup_vim.sh'
     node.vm.provision :shell, path: '../utils/setup_libcurl.sh'
     node.vm.provision :shell, path: '../utils/setup_imagemagick.rb'
+    node.vm.provision :shell, path: '../utils/setup_nodejs_and_yarn.rb'
     node.vm.synced_folder '~/projects/', '/projects'
   end
 end
