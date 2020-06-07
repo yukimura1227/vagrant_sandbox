@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.define :shirasagi do |node|
+    node.vm.network 'private_network', ip: '192.168.55.10'
+    node.vm.box = "generic/centos7"
+    node.vm.provision :shell, path: '../utils/setup_vim.sh'
+    node.vm.provision :shell, inline: 'su - vagrant; curl https://raw.githubusercontent.com/yukimura1227/shirasagi/master/bin/install.sh | bash -s 192.168.55.10'
+  end
+end
